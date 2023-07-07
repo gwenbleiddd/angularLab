@@ -1,0 +1,9 @@
+.navbar-end{
+    padding: 25px;
+    
+}
+
+.navbar-end a{
+    text-decoration: none;
+    padding-left: 15px;
+}

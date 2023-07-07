@@ -1,0 +1,17 @@
+
+<!-- always check the words in your ngFor -->
+<div class="display" *ngFor="let review of Info"> 
+    
+   
+    <ul  *ngIf="review.id===reviewId">
+        <li>Name: {{review.property_name}}<br>
+            Title: {{review.review_title}}<br>
+            Location: {{review.reviewer_location}}<br>
+            Date: {{review.review_date}}<br>
+            Rating: {{review.review_rating}}<br>
+            Review: {{review.review_text}}
+        </li>
+        
+    </ul>
+   
+</div>

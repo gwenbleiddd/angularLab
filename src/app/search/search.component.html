@@ -1,0 +1,21 @@
+<div class="search">
+    <form (ngSubmit)="submitConfirmation($event)" >
+        <input type="text" placeholder="Enter title or rating" #box (keyup) = "getValue(box.value)"><br><br>
+        <input type="text" placeholder="Enter title or rating" #box2><br>
+        <button type="submit" (click) = "getValue(box2.value)">Search</button>
+     </form> 
+
+     
+     <div class="searchDisplay"  *ngFor="let review of Info">
+        <ul *ngIf="userInput.toLowerCase()===review.review_title.toLowerCase() || userInput.toLowerCase()===review.review_rating">
+            <li >
+                Name: {{review.property_name}}<br>
+                Title: {{review.review_title}}<br>
+                Location: {{review.reviewer_location}}<br>
+                Date: {{review.review_date}}<br>
+                Rating: {{review.review_rating}}<br>
+                Review: {{review.review_text}}
+            </li>
+         </ul>
+     </div>
+ </div>
